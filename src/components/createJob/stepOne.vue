@@ -1,5 +1,7 @@
 <template>
   <div>
+    <h2>STEP1: 输入分子坐标</h2>
+    <hr>
   </div>
 </template>
 
