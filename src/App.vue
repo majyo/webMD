@@ -2,10 +2,10 @@
   <div id="app">
     <img src="./assets/logo.png">
     <p>
-      <router-link to="/">Home</router-link>
-      <router-link to="/createJob">New Job</router-link>
-      <router-link to="/document">Document</router-link>
-      <router-link to="/jobList">Job List</router-link>
+      <router-link to="/">webMD</router-link>
+      <router-link to="/createJob">新建任务</router-link>
+      <router-link to="/document">说明文档</router-link>
+      <router-link to="/jobList">任务列表</router-link>
     </p>
     <router-view/>
   </div>

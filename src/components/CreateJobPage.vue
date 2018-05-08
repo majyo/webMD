@@ -10,6 +10,8 @@
     <StepTwo></StepTwo>
     <StepThree></StepThree>
     <StepFour></StepFour>
+    <MDButton bType="normal">提交</MDButton>
+    <MDButton bType="delete">重置</MDButton>
   </div>
 </template>
 
