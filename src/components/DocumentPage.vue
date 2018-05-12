@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import jobTest from './TestJobs.js';
+import { foo } from './TestJobs.js';
 
 export default {
   name: 'DocumentPage',
@@ -17,7 +17,7 @@ export default {
   },
   methods: {
     test: function () {
-      alert(jobTest.jobName);
+      alert(foo.jobId);
     }
   }
 }

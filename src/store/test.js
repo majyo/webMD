@@ -5,7 +5,33 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    count: 0
+    jobs: [
+      {
+        jobId: 1,
+        jobName: "test1",
+        jobDetail: "test1 details"
+      },
+      {
+        jobId: 2,
+        jobName: "test2",
+        jobDetail: "test2 details"
+      },
+      {
+        jobId: 3,
+        jobName: "test3",
+        jobDetail: "test3 details"
+      },
+      {
+        jobId: 4,
+        jobName: "test4",
+        jobDetail: "test4 details"
+      },
+      {
+        jobId: 5,
+        jobName: "test5",
+        jobDetail: "test5 details"
+      }
+    ]
   },
   mutations: {
     increment (state) {

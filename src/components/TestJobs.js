@@ -1,4 +1,4 @@
-export const jobTest = {
+export var foo = {
   jobId: 1,
-  jobName: "test"
+  jobName: "test1"
 };

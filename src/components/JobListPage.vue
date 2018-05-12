@@ -3,12 +3,14 @@
       <p>{{msg}}</p>
       <ul v-if="jobs.length">
         <JobInfo v-for="job in jobs" v-bind:key="job.jobId" v-bind:jobInfo="job" v-on:delJob="deleteJob"></JobInfo>
+        <JobInfo v-for="job in testJobs" v-bind:key="job.jobId" v-bind:jobInfo="job" v-on:delJob="deleteJob"></JobInfo>
       </ul>
   </div>
 </template>
 
 <script>
 import JobInfo from './jobList/JobInfo.vue';
+import { mapState } from 'vuex';
 
 export default {
   name: 'JobListPage',
@@ -35,6 +37,11 @@ export default {
           jobDetail: "test1 details"
         }
       ]
+    }
+  },
+  computed: {
+    testJobs: function () {
+      return this.$store.state.jobs;
     }
   },
   methods: {
