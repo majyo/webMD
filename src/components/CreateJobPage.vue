@@ -17,10 +17,10 @@
 
 <script>
 import MDButton from './general/MDButton'
-import StepOne from './createJob/stepOne'
-import StepTwo from './createJob/stepTwo'
-import StepThree from './createJob/stepThree'
-import StepFour from './createJob/stepFour'
+import StepOne from './createJob/StepOne'
+import StepTwo from './createJob/StepTwo'
+import StepThree from './createJob/StepThree'
+import StepFour from './createJob/StepFour'
 
 export default {
   name: 'CreateJobPage',

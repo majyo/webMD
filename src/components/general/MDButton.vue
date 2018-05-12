@@ -1,5 +1,5 @@
 <template>
-<button v-bind:class="[{normal: isNormal}, {delete: isDelete}, {execute: isExecute}]">
+<button v-bind:class="[{normal: isNormal}, {delete: isDelete}, {execute: isExecute}]" v-on:click="$emit('click')">
   <slot></slot>
 </button>
 </template>
@@ -50,10 +50,10 @@ button {
   outline: none;
   border: none;
   text-align: center;
-  font-size: 20px;
+  font-size: 16px;
   font-family: sans-serif;
-  line-height: 50px;
-  min-width: 150px;
+  line-height: 36px;
+  min-width: 100px;
 }
 
 .normal {

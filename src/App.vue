@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <img src="./assets/logo.png">
+    <p>well</p>
     <p>
       <router-link to="/">webMD</router-link>
       <router-link to="/createJob">新建任务</router-link>
