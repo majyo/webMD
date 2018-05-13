@@ -5,19 +5,19 @@
     <ul>
       <li>
         <p>耦合方法</p>
-        <select v-model="tempCoupl.tcoupl" name="tcoupl" id="tcoupl">
+        <select v-model="newJob.tcoupl" name="tcoupl" id="tcoupl">
           <option disabled value="">---请选择---</option>
           <option value="">无耦合</option>
           <option value="v-rescale">速度重标法</option>
         </select>
       </li>
-      <li v-if="tempCoupl.tcoupl">
+      <li v-if="newJob.tcoupl">
         <p>耦合系数</p>
-        <input v-model="tempCoupl.taut" type="text" name="taut" id="taut">
+        <input v-model="newJob.taut" type="text" name="taut" id="taut">
       </li>
-      <li v-if="tempCoupl.tcoupl">
+      <li v-if="newJob.tcoupl">
         <p>耦合温度</p>
-        <input v-model="tempCoupl.reft" type="text" name="reft" id="reft">
+        <input v-model="newJob.reft" type="text" name="reft" id="reft">
       </li>
     </ul>
   </div>
@@ -33,6 +33,11 @@ export default {
         taut: 0,
         reft: 0
       }
+    }
+  },
+  computed: {
+  newJob: function () {
+    return this.$store.state.newJob
     }
   }
 }

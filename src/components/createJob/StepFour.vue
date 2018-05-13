@@ -5,19 +5,19 @@
     <ul>
       <li>
         <p>耦合方法</p>
-        <select v-model="pressCoupl.pcoupl" name="pcoupl" id="pcoupl">
+        <select v-model="newJob.pcoupl" name="pcoupl" id="pcoupl">
           <option disabled value="">---请选择---</option>
           <option value="">无耦合</option>
           <option value="Parrinello-Rahman">Parrinello-Rahman</option>
         </select>
       </li>
-      <li v-if="pressCoupl.pcoupl">
+      <li v-if="newJob.pcoupl">
         <p>耦合系数</p>
-        <input v-model="pressCoupl.taup" type="text" name="taup" id="taup">
+        <input v-model="newJob.taup" type="text" name="taup" id="taup">
       </li>
-      <li v-if="pressCoupl.pcoupl">
+      <li v-if="newJob.pcoupl">
         <p>耦合压力</p>
-        <input v-model="pressCoupl.refp" type="text" name="refp" id="refp">
+        <input v-model="newJob.refp" type="text" name="refp" id="refp">
       </li>
     </ul>
   </div>
@@ -33,6 +33,11 @@ export default {
         taup: 0,
         refp: 0
       }
+    }
+  },
+  computed: {
+  newJob: function () {
+    return this.$store.state.newJob
     }
   }
 }

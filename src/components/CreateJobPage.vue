@@ -5,7 +5,7 @@
     <StepTwo></StepTwo>
     <StepThree></StepThree>
     <StepFour></StepFour>
-    <MDButton bType="normal">提交</MDButton>
+    <MDButton bType="normal" v-on:click="submitJob">提交</MDButton>
     <MDButton bType="delete">重置</MDButton>
   </div>
 </template>
@@ -25,6 +25,11 @@ export default {
   data () {
     return {
       msg: 'Welcome to create job page'
+    }
+  },
+  methods: {
+    submitJob: function () {
+      this.$store.commit('addNewJob');
     }
   }
 }

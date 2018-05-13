@@ -9,7 +9,6 @@
 
 <script>
 import JobInfo from './jobList/JobInfo.vue';
-import { mapState } from 'vuex';
 
 export default {
   name: 'JobListPage',
