@@ -1,8 +1,7 @@
 <template>
   <div class="jobList">
       <p>{{msg}}</p>
-      <ul v-if="jobs.length">
-        <JobInfo v-for="job in jobs" v-bind:key="job.jobId" v-bind:jobInfo="job" v-on:delJob="deleteJob"></JobInfo>
+      <ul v-if="testJobs.length">
         <JobInfo v-for="job in testJobs" v-bind:key="job.jobId" v-bind:jobInfo="job" v-on:delJob="deleteJob"></JobInfo>
       </ul>
   </div>
@@ -19,24 +18,7 @@ export default {
   },
   data () {
     return {
-      msg: 'Welcome to job list page',
-      jobs: [
-        {
-          jobId: 1,
-          jobName: "test1",
-          jobDetail: "test1 details"
-        },
-        {
-          jobId: 2,
-          jobName: "test2",
-          jobDetail: "test1 details"
-        },
-        {
-          jobId: 3,
-          jobName: "test3",
-          jobDetail: "test1 details"
-        }
-      ]
+      msg: 'Welcome to job list page'
     }
   },
   computed: {
@@ -45,10 +27,8 @@ export default {
     }
   },
   methods: {
-    deleteJob: function (idToDelete) {
-      this.jobs = this.jobs.filter(
-        job => {return job.jobId !== idToDelete}
-        )
+    deleteJob: function (id) {
+      this.$store.commit('deleteJob', id);
     }
   }
 }

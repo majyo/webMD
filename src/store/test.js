@@ -31,11 +31,18 @@ export default new Vuex.Store({
         jobName: "test5",
         jobDetail: "test5 details"
       }
-    ]
+    ],
+    newJob: {
+      jobId: 0,
+      jobName: "",
+      jobDetail: ""
+    }
   },
   mutations: {
-    increment (state) {
-      state.count++
+    deleteJob (state, id) {
+      state.jobs = state.jobs.filter(
+        job => {return job.jobId !== id}
+      );
     }
   }
 })
