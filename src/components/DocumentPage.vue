@@ -1,7 +1,13 @@
 <template>
   <div class="document">
       <p>{{msg}}</p>
-      <button v-on:click="test">test</button>
+      <h2>webMD简介</h2>
+      <h3>输入分子坐标</h3>
+      <h3>设定基本参数</h3>
+      <h3>设定温度耦合</h3>
+      <h3>设定压力耦合</h3>
+      <h2>使用说明</h2>
+      <h2>分子动力学</h2>
   </div>
 </template>
 
